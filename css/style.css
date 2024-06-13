@@ -1,0 +1,1743 @@
+/* This is the link below for the font family that I'm using  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* This is the link below for all the icons that I'm using  */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css");
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: var(--textfont);
+}
+
+
+/* This is the colors and font family that I'm using within the root */
+
+:root{
+  --bgDcolor1: #014b3d;
+  --bgCcolor2: #1d8551;
+  --bgCcolor3: #cbedd6;
+  --bginputcolor1: #14734a;
+  --textcolor1: #ffffff;
+  --textcolor2: #f8f8f8;
+  --btnbgDcolor1: #1c8250;
+  --btnbgCcolor2: #36b962;
+  --textfont: "Poppins", sans-serif;
+  --paragraphfontsize: 1.1rem;
+}
+
+html{
+  font-size: 16px;
+}
+
+/* The styling for the index page starts here */
+.header{
+  width: 100%;
+  height: 18vh;
+  background-color: var(--bgDcolor1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.logo{
+  width: 12rem;
+  height: 13rem;
+  margin-left: 1rem;
+}
+
+.nav_link{
+  display: flex;
+  gap: 9%;
+}
+
+.header_btn{
+  display: flex;
+  gap: 2rem;
+  margin-right: 5%;
+}
+
+.header_links{
+  color: var(--textcolor1);
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.header_links::after{
+  content: '';
+  background-color: var(--btnbgCcolor2);
+  height: 3px;
+  width: 0%;
+  display: block;
+  transition: all .4s ;
+  border-radius: 2rem;
+  margin: auto;
+}
+
+.header_links:hover:after{
+  width: 100%;
+}
+
+
+.sub_memu_link{
+  color: var(--textcolor1);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.sub_memu_link::after{
+  content: '';
+  background-color: var(--btnbgCcolor2);
+  height: 3px;
+  width: 0%;
+  display: block;
+  transition: all .4s ;
+  border-radius: 2rem;
+  margin: auto;
+}
+
+.sub_memu_link:hover:after{
+  width: 100%;
+}
+
+.main_menu{
+  position: relative;
+}
+
+.sub_menuboth {
+  display: none;
+  position: absolute;
+  background-color: var(--bgCcolor3);
+  min-width: 170%;
+  height: 100px;
+  z-index: 1;
+  left: 0;
+  border-radius: .3rem;
+  transition: all 0.5s;
+  
+}
+
+.sub_menuboth a {
+  padding: 3%;
+  color: var(--textcolor1);
+  text-decoration: none;
+  display: block;
+}
+
+.sub_menuboth a:hover {
+  background-color: var(--bgDcolor1);
+}
+
+.main_menu:hover .sub_menuboth {
+  display: block;
+}
+
+ 
+.btn_header_links1{
+  color: var(--textcolor1);
+  font-size: 1.2rem;
+  font-weight: 600;
+  height: 3rem;
+  width: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+  background: var(--btnbgCcolor2);
+  transition: all .5s;
+  text-decoration: none;
+}
+
+.btn_header_links1:hover{
+  color: var(--btnbgCcolor2);
+  background: var(--bgCcolor3);
+}
+
+.btn_header_links2{
+  text-decoration: none;
+  color: var(--textcolor1);
+  font-size: 1.2rem;
+  font-weight: 600;
+  height: 3rem;
+  width: 13rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+  background: var(--btnbgCcolor2);
+  transition: all .5s;
+}
+
+.btn_header_links2:hover{
+  color: var(--btnbgCcolor2);
+  background: var(--bgCcolor3);
+}
+
+.home-section{
+  width: 100%;
+  height: 82vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background: var(--bgDcolor1);
+  color: var(--textcolor1);
+}
+
+.left_home_div{
+  width: 40%;
+  
+}
+
+.left_home_div{
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.home_section_h1{
+  font-size: 4rem;
+  font-family: var(--textfont);
+  font-weight: 900;
+  line-height: 3.6rem;
+}
+
+.h1_span{
+  color: var(--btnbgCcolor2);
+  font-size: 3.8rem;
+  font-family: 800;
+}
+
+.home_section_paragrph_container{
+  width: 80%;
+}
+
+.home_paragraph{
+  color: var(--textcolor2);
+  font-size: 1.2rem;
+  font-family: var(--textfont);
+  line-height: 1.6rem;
+}
+
+.home_section_btn_container{
+  width: 100%;
+}
+
+.home_section_btn_link{
+  color: var(--textcolor1);
+  font-size: 2.8rem;
+  padding: .5rem 3rem;
+  border-radius: 2.5rem;
+  background: transparent;
+  border: 2px solid  #1c8250;
+  cursor: pointer;
+  text-align: center;
+  margin-left: 15%;
+  margin-top: 4rem;
+  transition: all .3s ease-out;
+  font-family: var(--textfont);
+  text-decoration: none;
+}
+
+.home_section_btn_link:hover{
+  background: var(--textcolor1);
+  color: var(--btnbgDcolor1);
+  border: 2px solid  #ffffff;
+}
+
+.right_home_div{
+  width: 40%;
+}
+
+.home_section_img_container{
+  width: 80%;
+  height: 70vh;
+  background: var(--btnbgDcolor1);
+  border-radius: 4rem;
+  position: relative;
+}
+
+.home_section_img_inner{
+  width: 100%;
+  height: 100%;
+  /* background: #f5f5cd; */
+  background: var(--bgCcolor3);
+  position: absolute;
+  border-radius: 4rem;
+  left: 1.3rem;
+  bottom: 1.3rem;
+}
+
+.home_image{
+  width: 80%;
+  height: 100%;
+  position: absolute;
+  bottom: -2.4rem;
+  left: 3rem;
+}
+/* The styling for the index page ends here */
+
+/* The styling for the Signup page starts here */
+.signup_container{
+  width: 100%;
+  height: 100vh;
+  background: var(--bgCcolor3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--textcolor1);
+}
+
+.signup_inner_container{
+  width: 60%;
+  height: 96%;
+  background: var(--bgDcolor1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6rem;
+}
+
+.signup_div{
+  width: 98%;
+  height: 98%;
+  background: var(--bgDcolor1);
+  border: 2px solid #ffffff;
+  border-radius: 6rem;
+  display: grid;
+  grid-template-rows: repeat(3);
+  grid-template-columns: 1fr;
+  text-align: center;
+  box-shadow: -1px 1px 20px 1px rgba(203,237,214,0.92);
+  -webkit-box-shadow: -1px 1px 20px 1px rgba(203,237,214,0.92);
+  -moz-box-shadow: -1px 1px 20px 1px rgba(203,237,214,0.92);
+}
+
+.sign_label_text{
+ display: flex;
+ flex-direction: column;
+ gap: 1rem;
+ height: 60%;
+ width: 98%;
+ justify-content: center;
+ margin-top: 2rem;
+}
+
+.sign_label{
+ font-weight: 600;
+ font-size: 1.7rem;
+}
+
+.sign_text{
+ font-size: var(--paragraphfontsize);
+}
+
+.signup_span_1{
+  font-weight: 600;
+}
+
+.signup_form{
+  height: 90%;
+  width: 98%;
+  display: grid;
+  grid-template-rows: repeat(4);
+  row-gap: .5rem;
+}
+
+.signup_full_name_inpt{
+  border-radius: 2rem;
+  padding: .9rem;
+  width: 70%;
+  font-size: var(--paragraphfontsize);
+  border: none;
+  background: var(--bginputcolor1);
+  color: var(--textcolor2);
+  margin-bottom: .5rem;
+}
+
+.mail_contact_password2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 98%;
+  height: 40%;
+  margin-top: 2.5rem;
+  margin-left: .5rem;
+}
+
+.signup_email_inpt, .signup_contact_inpt, .signup_password_inpt, .signup_comfrime_password_inpt{
+  border-radius: 2rem;
+  padding: .9rem;
+  width: 100%;
+  font-size: var(--paragraphfontsize);
+  border: none;
+  background: var(--bginputcolor1);
+  color: var(--textcolor2);
+  margin-bottom: 1rem;
+  margin-top: .5rem;
+  
+}
+
+.instructions_container{
+  margin-bottom: 2rem;
+  margin-top: 0rem;
+  position: relative;
+  width: 80%;
+}
+
+.instructions{
+  position: absolute;
+  left: 13rem;
+  bottom: 1rem;
+}
+
+::placeholder{
+  color: var(--textcolor2);
+}
+
+.date_gender_nationality_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 98%;
+  height: 10%;
+  
+}
+
+.date_gender_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 44%;
+  
+}
+
+.signup_DOB_inpt{
+  border-radius: 2rem;
+  padding: .9rem;
+  width: 70%;
+  font-size: var(--paragraphfontsize);
+  border: none;
+  background: var(--bginputcolor1);
+  margin-left: 1rem;
+  color: var(--textcolor2);
+}
+
+.nationality_container{
+  margin-right: 2rem;
+}
+
+.signup_nationality_inpt{
+  border-radius: 2rem;
+  padding: .9rem;
+  width: 90%;
+  font-size: var(--paragraphfontsize);
+  border: none;
+  background: var(--bginputcolor1);
+  color: var(--textcolor2);
+}
+
+.term_of_use_statement{
+  font-size: var(--paragraphfontsize);
+ }
+ 
+ .term_of_use_link{
+   font-weight: 600;
+   color: var(--btnbgCcolor2);
+ }
+
+ .term_of_use_link:hover{
+  font-weight: 600;
+  color: var(--bgCcolor3);
+  text-decoration: none;
+}
+
+.term_of_use_2links_btn{
+  margin-top: 1rem;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.signup_links2_btn{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.sign_login_btn{
+  text-decoration: none;
+  color: var(--textcolor1);
+  font-size: 1.8rem;
+  height: 100%;
+  width: 18%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+  background: var(--btnbgCcolor2);
+  transition: all .5s;
+}
+
+.sign_login_btn:hover{
+  border: 2px solid #36b962;
+  background: transparent;
+}
+
+
+.signup_done_btn{
+  border-radius: 2rem;
+  padding: 1% 6%;
+  font-size: 1.8rem;
+  border: 2px solid #36b962;
+  color: var(--textcolor1);
+  background: transparent;
+  cursor: pointer;
+  transition: all .5s;
+}
+
+.sign_done_btn:hover{
+  background: var(--btnbgCcolor2);
+}
+
+.signp_continue_text{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.signup_white_span{
+  width: 18rem;
+  background: var(--bgCcolor3);
+  height: .3rem;
+  border-radius: 2rem;
+}
+
+.fa-apple, .fa-google, .fa-facebook-f{
+  padding: 0 .5rem;
+  color: var(--btnbgCcolor2);
+  font-size: 1.2rem;
+}
+/* The styling for the signup page ends here */
+/* The styling for the login page starts here */
+
+.login_container{
+  width: 100vw;
+  height: 100vh;
+  background: var(--bgCcolor3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--textcolor1);
+}
+
+.login_inner_container{
+  width: 62%;
+  height: 94%;
+  background: var(--bgDcolor1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6rem;
+}
+
+.login_div{
+  width: 96%;
+  height: 98%;
+  background: var(--bgDcolor1);
+  border: 2px solid #ffffff;
+  border-radius: 6rem;
+  display: grid;
+  grid-template-rows: repeat(3);
+  grid-template-columns: 1fr;
+  text-align: center;
+  box-shadow: -1px 1px 20px 1px rgba(203,237,214,0.92);
+  -webkit-box-shadow: -1px 1px 20px 1px rgba(203,237,214,0.92);
+  -moz-box-shadow: -1px 1px 20px 1px rgba(203,237,214,0.92);
+}
+
+.login_label_text{
+ display: flex;
+ flex-direction: column;
+ gap: 1rem;
+ height: 60%;
+ width: 98%;
+ justify-content: center;
+ margin-top: 2rem;
+}
+
+.login_label{
+ font-weight: 600;
+ font-size: 1.7rem;
+}
+
+.login_text{
+ font-size: var(--paragraphfontsize);
+}
+
+.login_form{
+  height: 90%;
+  width: 98%;
+  display: grid;
+  grid-template-rows: repeat(4);
+  row-gap: .5rem;
+}
+
+.login_full_name_inpt{
+  border-radius: 2rem;
+  padding: 1.3%;
+  width: 80%;
+  font-size: var(--paragraphfontsize);
+  border: none;
+  background: var(--bginputcolor1);
+  color: var(--textcolor2);
+  margin-bottom: .5rem;
+}
+
+.login_forget_password_btn_container{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+}
+
+.login_forget_password_btn{
+  border-radius: 2rem;
+  padding: 1% 2%;
+  font-size: 1.6rem;
+  width: 24%;
+  border: 2px solid #36b962;
+  background: transparent;
+  color: var(--textcolor1);
+  transition: all .5s;
+  text-decoration: none;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+}
+
+.login_forget_password_btn:hover{
+  border: none;
+  background: var(--btnbgCcolor2);
+}
+
+
+.login_term_of_use_2links_btn{
+  margin-top: 1rem;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.login_term_of_use_link{
+  font-weight: 600;
+  color: var(--btnbgCcolor2);
+  text-decoration: underline;
+  transition: all .5s;
+}
+
+.login_term_of_use_link:hover{
+  text-decoration: none;
+}
+
+.login_links2_btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-direction: column-reverse;
+}
+
+.login_signup_btn{
+  text-decoration: none;
+  color: var(--textcolor1);
+  font-size: 1.8rem;
+  height: 100%;
+  /* padding: 3%; for query */
+  /* width: 65%; for query */
+  width: 18%;
+  padding: 1% .8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+  background: var(--btnbgCcolor2);
+  transition: all .5s;
+  text-decoration: none;
+}
+
+.login_signup_btn:hover{
+  border: 2px solid #ffffff;
+  color: var(--btnbgCcolor2);
+  background: var(--textcolor1);
+}
+
+.login_enter_btn{
+  border-radius: 2rem;
+  padding: .9% 5%;
+  font-size: 1.8rem;
+  border: 2px solid #36b962;
+  color: var(--textcolor1);
+  background: transparent;
+  cursor: pointer;
+  transition: all .5s;
+}
+
+.login_enter_btn:hover{
+  color: var(--textcolor1);
+  background: var(--btnbgCcolor2);
+}
+
+.login_continue_text{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.3rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.login_contiune_para{
+  font-size: var(--paragraphfontsize);
+  margin-top: 1rem;
+}
+
+.login_white_span{
+  width: 28%;
+  background: var(--bgCcolor3);
+  height: .3rem;
+  border-radius: 2rem;
+}
+
+.fa-apple, .fa-google, .fa-facebook-f{
+  margin: 0 .4rem;
+  color: var(--btnbgCcolor2);
+  font-size: rem;
+  transition: all .5s;
+}
+
+.fa-facebook-f:hover{
+  color: var(--bgCcolor3);
+}
+
+.fa-apple:hover{
+  color: var(--bgCcolor3);
+}
+
+.fa-google:hover{
+  color: var(--bgCcolor3);
+}
+
+/* The styling for the login page ends here */
+/* The styling for the reset password page starts here */
+
+.reset_password_container{
+  width: 100vw;
+  height: 100vh;
+  background: var(--bgCcolor3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--textcolor1);
+}
+
+.reset_password_inner_container{
+  width: 62%;
+  height: 94%;
+  background: var(--bgDcolor1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6rem;
+}
+
+.reset_password_div{
+  width: 96%;
+  height: 98%;
+  background: var(--bgDcolor1);
+  border: 2px solid #ffffff;
+  border-radius: 6rem;
+  display: grid;
+  grid-template-rows: repeat(3);
+  grid-template-columns: 1fr;
+  text-align: center;
+  box-shadow: -1px 1px 20px 1px rgba(203,237,214,0.92);
+  -webkit-box-shadow: -1px 1px 20px 1px rgba(203,237,214,0.92);
+  -moz-box-shadow: -1px 1px 20px 1px rgba(203,237,214,0.92);
+}
+
+.reset_password_label_text{
+ display: flex;
+ flex-direction: column;
+ gap: 1rem;
+ height: 60%;
+ width: 98%;
+ justify-content: center;
+ margin-top: 2rem;
+}
+
+.reset_password_label{
+ font-weight: 600;
+ font-size: 1.7rem;
+}
+
+.reset_password_text{
+  font-size: var(--paragraphfontsize);
+}
+
+.reset_password_form{
+  width: 98%;
+  height: 60%;
+  display: grid;
+  grid-template-rows: repeat(3);
+  row-gap: .5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.reset_password_full_name_inpt{
+  border-radius: 2rem;
+  padding: 1.3%;
+  width: 80%;
+  font-size: var(--paragraphfontsize);
+  border: none;
+  background: var(--bginputcolor1);
+  color: var(--textcolor2);
+  margin-bottom: .5rem;
+}
+
+.reset_password_forget_password_btn_container{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+}
+
+.reset_password_forget_password_btn{
+  border-radius: 2rem;
+  padding: 1% 2%;
+  font-size: 1.6rem;
+  width: 24%;
+  border: 2px solid #36b962;
+  background: transparent;
+  color: var(--textcolor1);
+  transition: all .5s;
+  text-decoration: none;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+}
+
+.reset_password_forget_password_btn:hover{
+  border: none;
+  background: var(--btnbgCcolor2);
+}
+
+.reset_password_term_of_use_link{
+  color: var(--btnbgCcolor2);
+  border-bottom: 2px solid #36b962;
+  border-radius: 2rem;
+}
+
+.reset_password_term_of_use_link:hover{
+  border: 2px solid #36b962;
+  border-radius: 2rem;
+  padding: 1%;
+  color: var(--textcolor1);
+}
+
+.reset_password_done_btn{
+  border-radius: 2rem;
+  padding: .9% 5%;
+  font-size: 1.8rem;
+  border: 2px solid #36b962;
+  color: var(--textcolor1);
+  background: transparent;
+  cursor: pointer;
+  transition: all .5s;
+}
+
+.reset_password_done_btn:hover{
+  color: var(--textcolor1);
+  background: var(--btnbgCcolor2);
+}
+
+/* The styling for the reset password page ends here */
+/* The styling for the forget password page starts here */
+
+.forget_password_container{
+  width: 100vw;
+  height: 100vh;
+  background: var(--bgCcolor3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--textcolor1);
+}
+
+.forget_password_inner_container{
+  width: 62%;
+  height: 94%;
+  background: var(--bgDcolor1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6rem;
+}
+
+.forget_password_div{
+  width: 96%;
+  height: 98%;
+  background: var(--bgDcolor1);
+  border: 2px solid #ffffff;
+  border-radius: 6rem;
+  display: grid;
+  grid-template-rows: repeat(3);
+  grid-template-columns: 1fr;
+  text-align: center;
+  box-shadow: -1px 1px 20px 1px rgba(203,237,214,0.92);
+  -webkit-box-shadow: -1px 1px 20px 1px rgba(203,237,214,0.92);
+  -moz-box-shadow: -1px 1px 20px 1px rgba(203,237,214,0.92);
+}
+
+.forget_password_label_text{
+ display: flex;
+ flex-direction: column;
+ gap: 1rem;
+ height: 60%;
+ width: 98%;
+ justify-content: center;
+ margin-top: 2rem;
+}
+
+.forget_password_label{
+ font-weight: 600;
+ font-size: 1.7rem;
+}
+
+.forget_password_text{
+  font-size: var(--paragraphfontsize);
+}
+
+.forget_password_form{
+  width: 98%;
+  height: 60%;
+  display: grid;
+  grid-template-rows: repeat(3);
+  row-gap: .5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.forget_password_full_name_inpt{
+  border-radius: 2rem;
+  padding: 1.3%;
+  width: 80%;
+  font-size: var(--paragraphfontsize);
+  border: none;
+  background: var(--bginputcolor1);
+  color: var(--textcolor2);
+  margin-bottom: .5rem;
+}
+
+.forget_password_forget_password_btn_container{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+}
+
+.forget_password_forget_password_btn{
+  border-radius: 2rem;
+  padding: 1% 2%;
+  font-size: 1.6rem;
+  width: 24%;
+  border: 2px solid #36b962;
+  background: transparent;
+  color: var(--textcolor1);
+  transition: all .5s;
+  text-decoration: none;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+}
+
+.forget_password_forget_password_btn:hover{
+  border: none;
+  background: var(--btnbgCcolor2);
+}
+
+.forget_password_term_of_use_link{
+  color: var(--btnbgCcolor2);
+  border-bottom: 2px solid #36b962;
+  border-radius: 2rem;
+}
+
+.forget_password_term_of_use_link:hover{
+  border: 2px solid #36b962;
+  border-radius: 2rem;
+  padding: 1%;
+  color: var(--textcolor1);
+}
+
+.forget_password_done_btn{
+  border-radius: 2rem;
+  padding: .9% 5%;
+  font-size: 1.8rem;
+  border: 2px solid #36b962;
+  color: var(--textcolor1);
+  background: transparent;
+  cursor: pointer;
+  transition: all .5s;
+}
+
+.forget_password_done_btn:hover{
+  color: var(--textcolor1);
+  background: var(--btnbgCcolor2);
+}
+
+/* The styling for the forget password page ends here */
+/* The styling for the Expense Entry form starts here */
+
+.header{
+  width: 100%;
+  height: 18vh;
+  background-color: var(--bgDcolor1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.header_linksB{
+  color: var(--textcolor1);
+  font-size: 1.6rem;
+  font-weight: 600;
+
+}
+
+.header_linksB::after{
+  content: '';
+  background-color: var(--btnbgCcolor2);
+  height: 3px;
+  width: 0%;
+  display: block;
+  transition: all .4s ;
+  border-radius: 2rem;
+  margin: auto;
+}
+
+.header_linksB:hover:after{
+  width: 90%;
+}
+
+.user_profile{
+  margin-right: 2%;
+  text-align: center;
+  width: 14%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5%;
+}
+
+.user_profile_img_contianer{
+  width: 80px;
+  height:80px;
+  background: var(--bgCcolor3);
+  border-radius: 50%;
+  position: relative;
+}
+
+.user_profile_img{
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  position: absolute;
+  top: 6.9%;
+  left: 3%;
+}
+
+.user_profile_name{
+  color: var(--textcolor1);
+  font-weight: 600;
+  font-size: var(--paragraphfontsize);
+}
+
+
+.expense_entry_container{
+  width: 100%;
+  height: 100vh;
+  background: var(--bgCcolor3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--textcolor1);
+}
+
+.expense_entry_inner_container{
+  width: 98%;
+  height: 98%;
+  background: var(--bgDcolor1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6rem;
+}
+
+.expense_entry_div{
+  width: 99%;
+  height: 98%;
+  background: var(--bgDcolor1);
+  border: 2px solid #ffffff;
+  border-radius: 6rem;
+  display: grid;
+  grid-template-rows: repeat(3);
+  grid-template-columns: 1fr;
+  text-align: center;
+  box-shadow: -1px 1px 20px 1px rgba(203,237,214,0.92);
+  -webkit-box-shadow: -1px 1px 20px 1px rgba(203,237,214,0.92);
+  -moz-box-shadow: -1px 1px 20px 1px rgba(203,237,214,0.92); 
+}
+
+.expense_entry_label_text{
+  width: 100%;
+  height: 95%;
+  border-bottom: 3px solid #14734a;
+  display: flex;
+  justify-content: center;
+}
+
+.expense_entry_main{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 15%;
+  padding: 2% 0;
+}
+
+.expense_entry_label{
+  font-weight: 600;
+  font-size: 2rem;
+  word-spacing: .5rem;
+}
+
+.expense_entry_text{
+  font-size: var(--paragraphfontsize);
+  word-spacing: .3;
+}
+
+.container_for_both_form{
+  display: flex;
+  width: 90%;
+  height: 90%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.expense_entry_ff{
+ margin-left: 5rem;
+ display: flex;
+ flex-direction: column;
+ gap: 1rem; 
+ justify-content: center;
+ height: max-content;
+ padding-top: 6%;
+}
+
+.ff_input_name_container{
+  display: flex;
+  gap: 11.2rem;
+}
+
+.ff_input_amount_container{
+  display: flex;
+  gap: 15.2rem;
+}
+
+.expense_amount, .expense_name, .expense_date, .expense_category, .expense_payment_method{
+  border-radius: 2rem;
+  padding: 2%;
+  width: 55%;
+  font-size: var(--paragraphfontsize);
+  border: none;
+  background: var(--bginputcolor1);
+  color: var(--textcolor2);
+}
+
+.ff_input_date_container{
+  display: flex;
+  gap: 17.6rem;
+}
+
+
+.ff_input_category_container{
+  display: flex;
+  gap: 14.4rem;
+}
+
+
+.ff_input_payment_container{
+  display: flex;
+  gap: 10rem;
+}
+
+
+.ff_input_note_container{
+  display: flex;
+  gap: 16.6rem;
+}
+.expense_note{
+  border-radius: 2rem;
+  padding-left: 2%;
+  padding-top: 2%;
+  font-size: var(--paragraphfontsize);
+  border: none;
+  background: var(--bginputcolor1);
+  color: var(--textcolor2);
+}
+
+.expense_label{
+  font-size: var(--paragraphfontsize);
+  word-spacing: .3rem;
+  font-weight: 400;
+}
+
+.expense_ff_submit_btn:hover{
+  color: var(--btnbgCcolor2);
+  background: var(--textcolor1);
+}
+/* The styling for the Expense Entry form ends here */
+/* The styling for the Expense view list starts here */
+
+.expense_list_container{
+  width: 100%;
+  height: max-content;
+  background: var(--bgCcolor3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--textcolor1);
+  padding: 1% 0;
+}
+
+.expense_list_inner_container{
+  width: 98%;
+  height: 98%;
+  background: var(--bgDcolor1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6rem;
+  padding: .5% 0;
+}
+
+.expense_list_div{
+  width: 99%;
+  height: 98%;
+  background: var(--bgDcolor1);
+  border: 2px solid #ffffff;
+  border-radius: 6rem;
+  display: grid;
+  grid-template-rows: repeat(3);
+  grid-template-columns: 1fr;
+  text-align: center;
+  
+  box-shadow: -1px 1px 20px 1px rgba(203,237,214,0.92);
+  -webkit-box-shadow: -1px 1px 20px 1px rgba(203,237,214,0.92);
+  -moz-box-shadow: -1px 1px 20px 1px rgba(203,237,214,0.92); 
+}
+
+.expense_list_label_text{
+  width: 100%;
+  height: 95%;
+  display: flex;
+  justify-content: center;
+}
+
+.expense_list_main{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 10%;
+  padding: 2% 0;
+  align-items: center;
+}
+
+.expense_list_CTA_text{
+  font-weight: 600;
+  font-size: 2.5rem;
+  word-spacing: .5rem;
+}
+
+.expense_list_text{
+  font-size: var(--paragraphfontsize);
+  word-spacing: .3;
+}
+
+
+
+.expense_list_input_container{
+  display: flex;
+}
+
+
+
+.expense_list_ff{
+  height: 100%;
+}
+
+.expense_list_label_container{
+  display: flex;
+  justify-content: space-around;
+  width: 55%;
+}
+
+
+/* The styling for the Expense view list ends here */
+/* The styling for the Expense Report starts here */
+
+
+
+
+/* The styling for the Expense Report ends here */
+/* The styling for the Budget setting starts here */
+
+.budget_setting_container{
+  width: 100%;
+  height: max-content;
+  background: var(--bgCcolor3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--textcolor1);
+  padding: 1% 0;
+}
+
+.budget_setting_inner_container{
+  width: 98%;
+  height: 98%;
+  background: var(--bgDcolor1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6rem;
+  padding: .5% 0;
+}
+
+.budget_setting_div{
+  width: 99%;
+  height: 98%;
+  background: var(--bgDcolor1);
+  border: 2px solid #ffffff;
+  border-radius: 6rem;
+  display: grid;
+  grid-template-rows: repeat(3);
+  grid-template-columns: 1fr;
+  text-align: center;
+  
+  box-shadow: -1px 1px 20px 1px rgba(203,237,214,0.92);
+  -webkit-box-shadow: -1px 1px 20px 1px rgba(203,237,214,0.92);
+  -moz-box-shadow: -1px 1px 20px 1px rgba(203,237,214,0.92); 
+}
+
+.budget_setting_label_text{
+  width: 100%;
+  height: 95%;
+  display: flex;
+  justify-content: center;
+}
+
+.budget_setting_main{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 10%;
+  padding: 2% 0;
+  align-items: center;
+}
+
+.budget_setting_CTA_text{
+  font-weight: 600;
+  font-size: 2.5rem;
+  word-spacing: .5rem;
+}
+
+.budget_setting_text{
+  font-size: var(--paragraphfontsize);
+  word-spacing: .3;
+}
+
+.container_for_budget_setting_form{
+  height: max-content;
+  padding: 1% 0;
+  width: 80%;
+  
+}
+
+.budget_setting_main_label1{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20%; 
+  width: 80%;
+}
+
+.budget_setting_main_label2{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 1%;
+  gap: 2%;
+  height: max-content;
+}
+
+.budget_setting_totalB_container{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  gap: 4%;
+}
+
+.budget_setting_totalB{
+  border-radius: 2rem;
+  font-size: var(--paragraphfontsize);
+  border: none;
+  background: var(--bginputcolor1);
+  color: var(--textcolor2);
+  padding: .5%;
+}
+
+.budget_setting_category_budget_amount{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20%; 
+  width: 80%;
+}
+
+.budget_setting_categories_container{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 5.5%; 
+  width: 80%;
+  margin: 2% 0;
+}
+
+.budget_setting_categories{
+  border-radius: 2rem;
+  font-size: var(--paragraphfontsize);
+  border: none;
+  padding: 1%;
+  background: var(--bginputcolor1);
+  color: var(--textcolor2);
+}
+
+.budget_setting_month_container{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%;
+}
+
+.budget_setting_label{
+  font-size: var(--paragraphfontsize);
+  word-spacing: .3rem;
+  font-weight: 400;
+}
+
+.budget_setting_month{
+  border-radius: 2rem;
+  font-size: var(--paragraphfontsize);
+  border: none;
+  height: 50%;
+  background: var(--bginputcolor1);
+  color: var(--textcolor2);
+  
+}
+
+.budget_setting_currency{
+  border-radius: 2rem;
+  font-size: var(--paragraphfontsize);
+  border: none;
+  padding: 1%;
+  background: var(--bginputcolor1);
+  color: var(--textcolor2);
+  
+}
+
+.budget_setting_education_container{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 5.5%; 
+  width: 80%;
+  align-items: center;
+ 
+}
+
+.budget_setting_education{
+  border-radius: 2rem;
+  font-size: var(--paragraphfontsize);
+  border: none;
+  padding: 1%;
+  background: var(--bginputcolor1);
+  color: var(--textcolor2);
+}
+
+.budget_setting_electricity_container{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 5.7%; 
+  width: 80%;
+  margin: 1% 0;
+  align-items: center;
+}
+
+.budget_setting_electricity{
+  border-radius: 2rem;
+  font-size: var(--paragraphfontsize);
+  border: none;
+  padding: 1%;
+  background: var(--bginputcolor1);
+  color: var(--textcolor2);
+}
+
+.budget_setting_transportation_container{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 3%; 
+  width: 80%;
+  align-items: center;
+}
+
+.budget_setting_transportation{
+  border-radius: 2rem;
+  font-size: var(--paragraphfontsize);
+  border: none;
+  padding: 1%;
+  background: var(--bginputcolor1);
+  color: var(--textcolor2);
+}
+
+.budget_setting_groceries_container{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 6%;
+  width: 80%; 
+  margin: 1% 0;
+  align-items: center;
+}
+
+.budget_setting_groceries{
+  border-radius: 2rem;
+  font-size: var(--paragraphfontsize);
+  border: none;
+  padding: 1%;
+  background: var(--bginputcolor1);
+  color: var(--textcolor2);
+}
+
+.budget_setting_dinning_container{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 7%; 
+  align-items: center;
+  width: 80%;
+}
+
+.budget_setting_dinning{
+  border-radius: 2rem;
+  font-size: var(--paragraphfontsize);
+  border: none;
+  padding: 1%;
+  background: var(--bginputcolor1);
+  color: var(--textcolor2);
+}
+
+.budget_setting_health_container{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 7.5%; 
+  width: 80%;
+  margin: 1% 0;
+  align-items: center;
+}
+
+.budget_setting_health{
+  border-radius: 2rem;
+  font-size: var(--paragraphfontsize);
+  border: none;
+  padding: 1%;
+  background: var(--bginputcolor1);
+  color: var(--textcolor2);
+}
+
+.budget_setting_utilities_container{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 7.3%; 
+  width: 80%;
+  align-items: center;
+}
+
+.budget_setting_utilities{
+  border-radius: 2rem;
+  font-size: var(--paragraphfontsize);
+  border: none;
+  padding: 1%;
+  background: var(--bginputcolor1);
+  color: var(--textcolor2);
+}
+
+.budget_setting_btns{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 4rem;
+}
+
+.budget_setting_cancel_btn{
+  text-decoration: none;
+  color: var(--textcolor1);
+  font-size: 1.2rem;
+  font-weight: 600;
+  height: 3rem;
+  width: 13rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+  background: var(--btnbgCcolor2);
+  transition: all .5s;
+  border: none;
+}
+
+.budget_setting_cancel_btn:hover{
+  color: var(--bgCcolor3);
+  background: var(--btnbgDcolor1);
+}
+
+.budget_setting_submit_btn{
+  text-decoration: none;
+  color: var(--textcolor1);
+  font-size: 1.2rem;
+  font-weight: 600;
+  height: 3rem;
+  width: 13rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+  background: var(--btnbgCcolor2);
+  transition: all .5s;
+  border: none;
+}
+
+.budget_setting_submit_btn:hover{
+  color: var(--btnbgCcolor2);
+  background: var(--textcolor2);
+}
+
+.budget_setting_add_btn{
+  border: none;
+  color: var(--textcolor1);
+  font-size: 1.2rem;
+  font-weight: 600;
+  height: 3rem;
+  width: 13rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+  background: var(--btnbgCcolor2);
+  transition: all .5s;
+}
+
+.budget_setting_add_btn:hover{
+  color: var(--btnbgCcolor2);
+  background: var(--bgCcolor3);
+}
+
+.budget_setting_second_text_container{
+  width: 100%;
+  display: flex;
+  padding: 2% 0;
+  justify-content: center;
+}
+
+.budget_setting_second_text{
+  font-size: var(--paragraphfontsize);
+  word-spacing: .3;
+  width: 80%;
+}
+
+/* The styling for the Budget setting ends here */
+/* The styling for the Budget summary starts here */
+
+.budget_summary_container{
+  width: 100%;
+  height: 100vh;
+  background: var(--bgCcolor3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--textcolor1);
+}
+
+.budget_summary_inner_container{
+  width: 98%;
+  height: 98%;
+  background: var(--bgDcolor1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6rem;
+}
+
+.budget_summary_div{
+  width: 99%;
+  height: 98%;
+  background: var(--bgDcolor1);
+  border: 2px solid #ffffff;
+  border-radius: 6rem;
+  display: grid;
+  grid-template-rows: repeat(3);
+  grid-template-columns: 1fr;
+  text-align: center;
+  box-shadow: -1px 1px 20px 1px rgba(203,237,214,0.92);
+  -webkit-box-shadow: -1px 1px 20px 1px rgba(203,237,214,0.92);
+  -moz-box-shadow: -1px 1px 20px 1px rgba(203,237,214,0.92); 
+}
+
+
+
+
+
+/* The styling for the Budget summary ends here */
+/* The styling for the Visual Expense starts here */
+
+
+
+
+/* The styling for the Visual Expense ends here */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
